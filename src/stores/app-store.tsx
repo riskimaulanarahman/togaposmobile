@@ -603,7 +603,7 @@ export function AppStoreProvider({ children }: { children: ReactNode }) {
   const loadReports = async () => {
     setReportLoading(true);
     try {
-      const data = await reportsService.getList(orders, outflows, reportFilters);
+      const data = await reportsService.getList(orders, outflows, reportFilters, products, categories);
       setReportData(data);
     } catch (error) {
       captureError(error);

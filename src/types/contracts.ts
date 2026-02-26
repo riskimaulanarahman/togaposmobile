@@ -109,6 +109,12 @@ export type OrderSummary = {
   cashierName: string;
   totalPrice: number;
   totalItems: number;
+  items?: Array<{
+    productId: number;
+    name: string;
+    qty: number;
+    subtotal: number;
+  }>;
   status: "completed" | "pending" | "refund";
   refundApprovalStatus: ApprovalStatus | null;
   createdAt: string;
