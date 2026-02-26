@@ -1,0 +1,35 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --ink: #0f172a;
+  --card: rgba(255, 255, 255, 0.94);
+  --line: #d9e4df;
+  --accent: #1f7a67;
+  --ok: #0f9f6d;
+  --warn: #d59f28;
+  --danger: #d54444;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  min-height: 100%;
+  background: radial-gradient(circle at top left, #faf2d0 0%, #eef6f4 45%, #f5f8fb 100%);
+  color: var(--ink);
+}
+
+.pb-safe {
+  padding-bottom: max(0.5rem, env(safe-area-inset-bottom));
+}
+
+input,
+select,
+button {
+  font: inherit;
+}
